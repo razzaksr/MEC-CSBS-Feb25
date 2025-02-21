@@ -1,0 +1,102 @@
+Software:
+	front end: UI
+	back end: Code
+	data end: CRUD Operations
+		temporary storage:
+			structures:list, array, tuple, dict
+		Permanent storage:
+			files
+			Data bases
+
+
+Database:
+	SQL:
+		table structured data	
+database	
+	table
+		column
+			rows
+	No SQL:
+		document structured
+
+{
+"key":value,
+}
+
+
+SQL:
+username, password, contact
+razzaksr	 Mohamed, 876789
+Annamalai, moorthi, 8767876
+
+NoSQL:
+{
+"username":"razzaksr",
+"password":"Mohamed",
+"contact":76789
+}
+
+{
+"fullname":"Annamalai S",
+"contact":876545678
+}
+
+Database Server:
+Mongo DB
+1. Compass
+2. mongodb atlas
+	shell>> command based interactive tool with cluster
+
+server:
+	database
+		collections
+	
+
+Mongodb shell commands:
+
+to list databases in cluster:
+show dbs	
+
+to create/switch to the database:
+use muthayammal
+
+to view the collections in database:
+show collections
+
+to create new collection:
+db.transactions.insertOne({"date":"2025-01-01","from":"razak","to":"manoj","amount":500,"type":"imps"})
+
+db.transactions.insertMany(
+[
+{"date":"2025-01-29","from":"Annamalai","to":"Vikas","amount":2899,"type":"neft"},
+{"date":"2025-02-19","from":"Razak","to":"Vikram","amount":933,"type":"imps"
+}
+])
+
+
+to view/read documents of the collection:
+db.transactions.find()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
