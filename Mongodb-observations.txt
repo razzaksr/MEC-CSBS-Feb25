@@ -78,20 +78,63 @@ to view/read documents of the collection:
 db.transactions.find()
 
 
+My github:
+https://github.com/razzaksr/MEC-CSBS-Feb25
+
+db.transactions.insertMany([
+{"date":"2025-02-10","from":"Annamalai","to":"Manoj","amount":8700,"type":"imps"},
+{"date":"2025-01-20","from":"Razak","to":"Richard","amount":87000,"type":"rtgs"},
+{"date":"2025-01-30","from":"Manoj","to":"Annamalai","amount":200,"type":"neft"},
+{"date":"2025-02-05","from":"Vinayak","to":"Vikram","amount":98000,"type":"rtgs"}
+])
 
 
+filter by date:
+db.transactions.find({"date":"2025-01-01"})
+based on from :
+db.transactions.find({"from":"Razak"})
+filter based on receiver:
+db.transactions.find({"to":"Annamalai"})
+filter transactions based on amount greater than 1000:
+db.transactions.find({"amount":{$gte:1000}})
 
 
+filter transactions based on amount greater than 1000:
+db.transactions.find({"amount":{$lte:1000}})
+
+filter based on amount between 1000 to 10000:
+db.transactions.find(
+{
+$and:
+[
+{"amount":{$gte:1000}},
+{"amount":{$lte:10000}}
+]
+}
+)
 
 
+update only one document:
+db.transactions.updateOne(
+{"from":"Razak"},
+{
+	$set:{"from":"Razak Mohamed S"}
+})
 
 
+update multiple document:
+db.transactions.updateMany(
+{"from":"Razak"},
+{
+	$set:{"from":"Razak Mohamed S"}
+})
 
 
+deleting documents:
+db.transactions.deleteOne({"from":"Razak Mohamed S"})
 
-
-
-
+delete many based on condition:
+db.transactions.deleteMany({"from":"Razak"})
 
 
 
