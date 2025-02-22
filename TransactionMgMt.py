@@ -25,6 +25,35 @@ def newTrasnactions():
                 "type":types}
     collection.insert_one(document)
     print("Transaction done")
-# main section
-newTrasnactions()
-viewTransactions()
+    
+
+def updateTransactions():
+    print("Update transaction date by sender ")
+    sender = input("enter the sender name ")
+    newDate = input("Enter the new date ")
+    condition = {"from":sender}
+    modify = {"$set":{"date":newDate}}
+    collection.update_many(condition,modify)
+    print("Date of ",sender,"has updated")
+    
+def deleteTransactions():
+    print("Deletion by date ")
+    held = input("Enter the date to delete ")
+    collection.delete_many({"date":held})
+    print("transactions deleted @",held)
+    
+# main section >> menu driven interactions
+print("welcome to transaction management system")
+
+
+
+while True:
+    print("1.Make new transaction\n2.View All trasnaction\n3.Update Transaction\n4.Delete transaction\nAny to logout")
+    choice = int(input("Enter the choice "))
+    if choice==1: newTrasnactions()
+    elif choice==2: viewTransactions()
+    elif choice==3: updateTransactions()
+    elif choice==4: deleteTransactions()
+    else: 
+        print("logging out")
+        break

@@ -138,6 +138,28 @@ db.transactions.deleteMany({"from":"Razak"})
 
 
 
+Connecting Mongodb with Python:
+
+1. required modules:
+	pymongo
+2. install modules:
+pip install pymongo --trusted-host pypi.org 
+--trusted-host pypi.python.org 
+--trusted-host files.pythonhosted.org
+
+
+
+To run python file:
+python filename.py
+
+
+
+
+
+
+
+
+
 
 
 
