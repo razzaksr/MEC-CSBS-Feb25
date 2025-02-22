@@ -48,7 +48,11 @@ print("welcome to transaction management system")
 
 
 while True:
-    print("1.Make new transaction\n2.View All trasnaction\n3.Update Transaction\n4.Delete transaction\nAny to logout")
+    print("1. Make new transaction")
+    print("2. View Transaction")
+    print("3. Update Transaction")
+    print("4. Delete ")
+    print("Any to logout")
     choice = int(input("Enter the choice "))
     if choice==1: newTrasnactions()
     elif choice==2: viewTransactions()
